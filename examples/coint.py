@@ -22,4 +22,4 @@ port = coint.construct_cointegrating_portfolio(price_matrix)
 fig = go.Figure()
 fig.add_trace(go.Scatter(x=np.arange(len(port)), y=port, mode="lines", name="lines"))
 
-adfuller(port, regression='n')
+adfuller(port, regression="n")
