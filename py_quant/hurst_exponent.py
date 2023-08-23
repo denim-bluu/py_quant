@@ -1,5 +1,6 @@
 import numpy as np
 from numpy import typing as npt
+from util.array import calculate_daily_return
 
 
 def get_hurst_exponent(price: npt.NDArray[np.float_], max_lag=20) -> float:
@@ -41,7 +42,7 @@ def get_hurst_exponent_rs(price: npt.NDArray[np.float_]) -> npt.NDArray[np.float
     Returns:
       the Hurst exponent, which is calculated using the R/S method.
     """
-    ret = price[1:] / price[:-1] - 1
+    ret = calculate_daily_return(price)[1:]
     n = np.round(len(ret) / 2 ** np.arange(0, 10)).astype(int)
 
     y = []
