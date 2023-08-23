@@ -5,7 +5,7 @@ from py_quant import hurst_exponent as he
 
 if __name__ == "__main__":
     np.random.seed(42)
-    random_changes = 1. + np.random.randn(99999) / 1000.
+    random_changes = 1.0 + np.random.randn(99999) / 1000.0
     series = np.cumprod(random_changes)  # create a random walk from random changes
     price = yf.download("CAD=X", start="2007-07-24", end="2012-03-28", progress=False)[
         "Adj Close"
