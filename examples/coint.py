@@ -3,7 +3,7 @@ import plotly.graph_objects as go
 import yfinance as yf
 from statsmodels.tsa.stattools import adfuller
 
-from py_quant import coint
+from py_quant.mean_reversion import coint
 
 ige = yf.download("IGE", start="2006-04-26", end="2012-04-09", progress=False)[
     "Adj Close"
