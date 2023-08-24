@@ -1,6 +1,6 @@
 import numpy as np
 from numpy import typing as npt
-from util.array import calculate_daily_return
+from util.math import calculate_daily_return
 
 
 def get_hurst_exponent(price: npt.NDArray[np.float_], max_lag=20) -> float:

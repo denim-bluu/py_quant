@@ -1,8 +1,5 @@
 import numpy as np
-import pandas as pd
 from numpy import typing as npt
-import statsmodels.api as sm
-from util.array import shift
 
 
 def calculate_half_life_mean_revert(

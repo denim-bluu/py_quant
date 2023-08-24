@@ -1,4 +1,3 @@
-import numpy as np
 import yfinance as yf
 
 from py_quant.mean_reversion import hurst_exponent as he
